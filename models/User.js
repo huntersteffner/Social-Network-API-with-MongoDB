@@ -2,10 +2,10 @@ const {Schema, model} = require('mongoose')
 
 
 // From https://thewebdev.info/2022/03/16/how-to-validate-email-syntax-with-mongoose/
-const validateEmail = (email) => {
-    const re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    return re.test(email);
-  };
+// const validateEmail = (email) => {
+//     const re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+//     return re.test(email);
+//   };
 
 const userSchema = new Schema(
     {
