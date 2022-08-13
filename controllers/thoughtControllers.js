@@ -122,9 +122,7 @@ const thoughtController = {
 
             },
             {
-                $pull: {
-                    reactions: params.reactionId
-                }
+                $pull:  {reactionId: params.reactionId}
             },
             {
                 new: true

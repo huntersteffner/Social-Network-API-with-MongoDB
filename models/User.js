@@ -38,21 +38,17 @@ const userSchema = new Schema(
         ]
     },
     {
-        // I don't know if this is correct, but I took from Act 23 from Unit 18
-        toJSON: {
-            virtuals: true,
-          },
-          id: false,
+    // I don't know if this is correct, but I took from Act 23 from Unit 18
+    toJSON: {
+        virtuals: true,
+      },
+      id: false,
     }
-)
+);
 
-userSchema
-    .virtual('friendCount')
-    .get(function () {
-        return this.friends.length
-    })
-
-
-const User = model('user', userSchema)
+userSchema.virtual('friendCount').get(function() {
+    return this.friends.length;
+ });
+const User = model('user', userSchema);
 
 module.exports = User

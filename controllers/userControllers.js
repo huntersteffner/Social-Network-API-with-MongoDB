@@ -1,5 +1,5 @@
 // const { ObjectId} = require('mongoose').Types
-const User = require('../models')
+const {User} = require('../models')
 
 const userController = {
     getAllUsers(req, res) {
